@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from zoo.views import zoo_list_view
+from zoo.views import zoo_list_view, zoo_create_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('list/', zoo_list_view),
+    path('new/', zoo_create_view),
 ]

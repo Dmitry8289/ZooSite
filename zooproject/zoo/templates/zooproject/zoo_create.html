@@ -1,0 +1,22 @@
+{% extends 'root.html' %}
+{% block content %}
+    <style>
+        label {
+            display: flex;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+            width: fit-content;
+        }
+
+    </style>
+    <div class="d-flex justify-content-center">
+        <form action="." method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-success" value="Создать шаблон животного">
+        </form>
+    </div>
+{% endblock %}
