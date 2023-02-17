@@ -11,3 +11,6 @@ class Zoo(models.Model):
     class Meta:
         verbose_name = "Животное"
         verbose_name_plural = "Животные"
+
+    def __str__(self):
+        return self.name

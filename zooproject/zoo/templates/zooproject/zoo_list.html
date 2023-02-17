@@ -1,0 +1,11 @@
+{% extends 'root.html' %}
+{% block content %}
+    <div class="p-2 m-3 border">
+        {% for zoo in zoo_list %}
+            <p>Вид животного: {{ zoo.animal_type }}</p>
+            <p>Название: {{ zoo.name }}</p>
+            <p>Краткое описание: {{ zoo.description }}</p>
+            <p>Дата создания статьи: {{ zoo.date_of_added }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}
